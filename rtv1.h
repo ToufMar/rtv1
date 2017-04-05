@@ -40,27 +40,25 @@ typedef struct s_infos
 {
   int   origin[3];
   int   rotation[3];
-  int   spot[2];
+  int   spot[3];
 }              t_infos;
 
-typedef struct s_sdl
-{
-  SDL_Window  *window;
-  SDL_Renderer *render;
-  SDL_Event   event;
-}
-                t_sdl;
+// typedef struct s_sdl
+// {
+//   SDL_Window  *window;
+//   SDL_Renderer *render;
+//   SDL_Event   event;
+// }
+//                 t_sdl;
 
 typedef struct s_global
 {
   struct s_infos  infos;
   struct s_object *object;
-  struct s_sdl    *sdl;
+  // struct s_sdl    *sdl;
   int             nb_obj;
 
 }              t_global;
-
-
 
 void    parse(char *av, t_global *g);
 void    stock_data(t_global *g, char *str, int nb, t_object *obj);

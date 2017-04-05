@@ -2,7 +2,7 @@
 
 void    stock_spot(char **split_val, t_global *g)
 {
-  if (len_tab(split_val) == 2)
+  if (len_tab(split_val) == 3)
   {
     int i;
 
