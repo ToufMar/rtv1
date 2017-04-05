@@ -20,3 +20,32 @@ int is_number(char *str)
   }
   return (1);
 }
+
+int nb_obj(char *occ)
+{
+  int i;
+
+  i = 0;
+  while (*occ)
+  {
+    if (occ == ft_strstr(occ, "object"))
+    {
+      occ = &occ[ft_strlen("object")];
+      i++;
+    }
+    occ++;
+  }
+  return (i > 0 ? i : 0);
+}
+
+void init_obj(t_global *g, int nb)
+{
+  int i;
+
+  i = 0;
+  while (i < nb)
+  {
+    ft_bzero(&g->object[i], sizeof(t_object));
+    i++;
+  }
+}
